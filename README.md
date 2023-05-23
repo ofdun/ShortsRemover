@@ -29,10 +29,10 @@ git clone https://github.com/ofdun/ShortsRemover.git
 
 3. Turn on "Developer mode" in right top corner
 
-4. Click "Load unpacked" on the left top corner and choose directory where you have this repo cloned
+4. Click "Load unpacked" on the left top corner and choose directory where you have this repo cloned (/developing/)
 
 5. Make sure it is now turned on.
 
-## Creator <a name = "creator"></a>
+### Creator <a name = "creator"></a>
 
 This extension was fully created by me! Here is my telegram if you want contact me: [@eliseyofdun](https://t.me/eliseyofdun)
