@@ -6,7 +6,7 @@ window.onload = function () {
             const videos = document.getElementsByTagName("ytd-grid-video-renderer");
             Array.from(videos).forEach(function (item) {
                 const thumbnail_html = item.getElementsByTagName('a')[0];
-                const videos_href = thumbnail_html.href; // https://www.youtube.com/watch?v=kb7ZvpOQ5YI
+                const videos_href = thumbnail_html.href;
                 if (check_for_shorts(videos_href)) {
                     item.remove();
                 }
