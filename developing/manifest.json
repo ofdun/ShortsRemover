@@ -6,14 +6,15 @@
   "icons": {
     "64": "icons/icon_64.png"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_title": "Shorts Remover",
     "default_popup": "popup.html"
   },
   "permissions": [
     "scripting", "activeTab"
-  ]
+  ],
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["background.js"]
+  }]
 }
