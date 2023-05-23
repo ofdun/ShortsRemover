@@ -1,17 +1,23 @@
-const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById("checkbox");
 
-if (localStorage['checkbox'] === undefined) {
-    localStorage['checkbox'] = true;
-}
-else {
-    // if "true" in storage we should make this.checked = true, otherwise false
-    checkbox.checked = localStorage['checkbox'] === 'true' ? true : false; 
+function init_status() {
+  chrome.storage.sync.get(["checkbox"], (items) => {
+    console.log(items["checkbox"]);
+    if (items["checkbox"] === undefined) {
+      update_checkbox(true);
+    }
+    checkbox.checked = items["checkbox"] === "true"
+  });
 }
 
 function update_checkbox(value) {
-    localStorage['checkbox'] = value;
+  console.log(JSON.stringify(value));
+  chrome.storage.sync.set({ checkbox: JSON.stringify(value) }, () => {});
+  init_status();
 }
 
-checkbox.addEventListener('change', function () {
-    update_checkbox(this.checked);
-})
+init_status();
+
+checkbox.addEventListener("change", function () {
+  update_checkbox(this.checked);
+});
