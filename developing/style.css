@@ -110,4 +110,11 @@ hr {
   top: 70px;
 }
 
+#attention {
+  display: none;
+  color: red;
+  position: absolute;
+  top: 165px;
+}
+
 /*# sourceMappingURL=popup.css.map*/
