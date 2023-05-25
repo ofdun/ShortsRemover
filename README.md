@@ -1,4 +1,4 @@
-# Project Title
+# Youtube Shorts Remover
 
 YouTube Shorts from subscribers feed remover.
 
