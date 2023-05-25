@@ -1,4 +1,5 @@
 const checkbox = document.getElementById("checkbox");
+const attention = document.getElementById('attention');
 
 function init_status() {
   chrome.storage.sync.get(["checkbox"], (items) => {
@@ -11,7 +12,7 @@ function init_status() {
 }
 
 function update_checkbox(value) {
-  console.log(JSON.stringify(value));
+  attention.style.display = 'block';
   chrome.storage.sync.set({ checkbox: JSON.stringify(value) }, () => {});
   init_status();
 }
